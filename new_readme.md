@@ -83,7 +83,7 @@ I want to be able to do CRUD for these models with Active Record. We'll be going
 
 First let's create our database and create our schema file in the terminal:
 
-![](./output-0.png)
+![](./images/readme-0.png)
 
 > All we did here was create a database in PSQL. If you ever want to drop a database the command is `$ dropdb <database_name>` (VERY DANGEROUS)
 
@@ -91,11 +91,11 @@ Next, I want to update the schema file and then load tables for our models into 
 
 in `db/wdi_schema.sql` file:
 
-![](./output-1.png)
+![](./images/readme-1.png)
 
 now lets run our `wdi_schema.sql` file in the terminal:
 
-![](./output-2.png)
+![](./images/readme-2.png)
 
 (ST-WG) Is this potentially really dangerous?
 
@@ -111,10 +111,10 @@ You'll know you did this right if:
 
 You enter psql and run these commands:
 
-![](./output-3.png)
+![](./images/readme-3.png)
 
 The output should be:
-![](./output-4.png)
+![](./images/readme-4.png)
 
 ## Break (10/65)
 
@@ -124,7 +124,7 @@ The output should be:
 Great, now we have a table loaded into our database we're now ready to get started on the ruby side.
 Let's first create all the directories/files we're going to need in the terminal:
 
-![](./output-5.png)
+![](./images/readme-5.png)
 
 > The `app.rb` file is our main application file. This is where a lot of the main program logic will live.
 
@@ -141,7 +141,7 @@ We stand on the shoulders of giants. Oh there's code for that? yoink.
 
 In the `Gemfile`:
 
-![](./output-6.png)
+![](./images/readme-6.png)
 
 > Without these gems, we would be unable to talk to our SQL database.
 
@@ -152,20 +152,20 @@ Then I'm going to run `$ bundle install` in the terminal.
 
 In the `models/student.rb` file, let's define our student model:
 
-![](./output-7.png)
+![](./images/readme-7.png)
 
 > In this ruby file, we create a class of Student that inherits from `ActiveRecord::Base`. Essentially, when we inherit from `ActiveRecord::Base`, it gives this class a whole bunch of functionality that maps the ruby `Student` class to the `students` table in postgres.
 
 Now, lets create a file that handles the connection between our application and our database:
 
-![](./output-8.png)
+![](./images/readme-8.png)
 
 In `db/connection.rb`:
-![](./output-9.png)
+![](./images/readme-9.png)
 
 Finally, let's build out the functionality of the `app.rb` file(which in this case is just dropping us into pry):
 
-![](./output-10.png)
+![](./images/readme-10.png)
 
 > note the difference between `require` and `require_relative`. With `require` we are getting gems and `require_relative` we are getting files relative to the location of the file we wrote `require_relative` in
 
@@ -178,7 +178,7 @@ You'll know you did this right if:
 Run your program(`$ ruby app.rb`) and then when you enter `pry` run this line of code:
 
 you should get something like this(it won't be the same letters and numbers)
-![](./output-11.png)
+![](./images/readme-11.png)
 
 [solution code](https://github.com/ga-wdi-exercises/tunr-active-record/archive/v1.1.zip)
 
@@ -194,13 +194,13 @@ You did this right if:
 
 You run your program and enter this and get the same output:
 
-![](./output-12.png)
+![](./images/readme-12.png)
 
 ### Methods - WDI (I Do -  30/175)
 
 Great! We've got everything done that we need to get setup with single model CRUD in our application. Let's run it in the terminal:
 
-![](./output-13.png)
+![](./images/readme-13.png)
 
 When we run this app, we can see that it drops us into pry. Let's write some code in pry to update our database... **IN REALTIME!!!**
 
@@ -210,51 +210,51 @@ Let's create an instance of the Student object on the ruby side:
 
 > **Note** the syntax for creating a new instance.
 
-![](./output-14.png)
+![](./images/readme-14.png)
 
 To save our instance to the database we use `.save`:
 
-![](./output-15.png)
+![](./images/readme-15.png)
 
 If we want to initialize an instance of an object AND save it to the database we use `.create`:
 
-![](./output-16.png)
+![](./images/readme-16.png)
 
 (ST-WG) Why is there a distinction between when it's saved in one command versus two.
 
 One really handy feature we get from an Active Record inherited class is that all of the attribute columns of our model are now `attr_accessor`'s as well. So we can do things like:
 
-![](./output-17.png)
+![](./images/readme-17.png)
 
 > **Note:** Should be noted that when we set the attribute using a setter, it doesn't automatically save to the database, its not until we call `.save` on the object that it saves to the database
 
 To get all of the students we use `.all`:
 
-![](./output-18.png)
+![](./images/readme-18.png)
 
 We can also find a student by its ID using `.find`:
 
-![](./output-19.png)
+![](./images/readme-19.png)
 
 Additionally we can also find a student by an attribute using `.find_by`:
 
-![](./output-20.png)
+![](./images/readme-20.png)
 
 > Note that find_by only returns the first object that meets the requirements of the arguments
 
 If you want all students that meet a certain query then we use `.where`:
 
-![](./output-21.png)
+![](./images/readme-21.png)
 
 We can also update attributes and save at the same time using the `.update` method:
 
-![](./output-22.png)
+![](./images/readme-22.png)
 
 > If we want to update the attribute and not save we would have to use something from this [post](http://www.davidverhasselt.com/set-attributes-in-activerecord/)
 
 Finally we can also just destroy/delete rows in our database with the `.destroy` method:
 
-![](./output-23.png)
+![](./images/readme-23.png)
 
 > This is exciting stuff by the way, imagine, while we do these things, that our students model is instead a post on facebook, or a comment on facebook. So the next time you comment on someone's facebook page you have an idea now of whats happening on the database layer. Maybe not the whole picture, but you have an idea. We're going to build on that idea in the coming week and half, and thats really exciting.
 
@@ -294,7 +294,7 @@ Let's see what some of this stuff looks like in code. We're going to be adding a
 
 In `wdi_schema.sql`:
 
-![](./output-24.png)
+![](./images/readme-24.png)
 
 Make note of the foreign key in `students`
 
@@ -303,16 +303,16 @@ Make note of the foreign key in `students`
 
 Next I want to create a new file for my Instructor AR Class definition `$ touch models/instructor.rb`. In it I'll put:
 
-![](./output-25.png)
+![](./images/readme-25.png)
 
 Now In my `models/student.rb` we have to reflect the association:
 
-![](./output-26.png)
+![](./images/readme-26.png)
 > note the plurality of `students` and singularity of `instructor`.  
 
 We also need to include the `models/instructor.rb` file into our `app.rb` so in `app.rb` we need to add
 
-![](./output-27.png)
+![](./images/readme-27.png)
 
 ### Updating Class Definitions - Tunr (You Do - 10 / 240)
 
@@ -328,23 +328,23 @@ Basically when we added those two lines of code `has_many :students` `belongs_to
 
 Lets create some objects in our `app.rb` so we can see what were talking about:
 
-![](./output-28.png)
+![](./images/readme-28.png)
 
 > ST-WG Why do we need to use `.destroy_all`?
 
 Now that we have this association, we can now easily query the database for the relevant records.
 
 If I want to get all of Jesse's students or set Jesse's students I can now write this code:
-![](./output-29.png)
+![](./images/readme-29.png)
 > note that when students is being used as a setter method above, it actually changes the instructor_id column for those students to match Jesse's primary ID. Any student that previously was assigned to Jesse and not reassigned in the setter will now have an instructor_id of nil
 
 Alternatively if I wanted to get a student's instructor I could write this code:
 
-![](./output-30.png)
+![](./images/readme-30.png)
 
 We can also create new students under a certain instructor by doing the following:
 
-![](./output-31.png)
+![](./images/readme-31.png)
 > **Note** that we did not pass in an instructor id above. Active Record is smart and does that for us.
 
 ### Association Helper Methods - Tunr (You Do - 15 / 285)
@@ -358,7 +358,7 @@ We want some sort of data in our database so that we can test our applications. 
 
 In our `db/seeds.rb` file let's put the following:
 
-![](./output-32.png)
+![](./images/readme-32.png)
 
 Once we get rid of this duplicate CRUD code in `app.rb` we can just run this seed file once and know our data is good.
 
@@ -400,5 +400,3 @@ Review Learning Objectives
 |argument for has_many| snake case and plural|
 |argument for belongs_to| snake case and singular|
 |more to follow....|||
-
-
