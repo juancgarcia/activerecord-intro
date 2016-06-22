@@ -329,7 +329,7 @@ kanye.destroy
 
 ### Methods - Tunr (You Do (In Pry!) - 15 / 90)
 
-[Part 1.3 - Use Your Artist Model](https://github.com/ga-wdi-exercises/tunr-active-record#part-13---use-your-artist-model)
+[Part 1.1 - Use Your Artist Model](https://github.com/ga-wdi-exercises/tunr-active-record#part-13---use-your-artist-model)
 
 ## Associations
 
