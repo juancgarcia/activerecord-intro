@@ -100,14 +100,18 @@ today in Ruby will look like some form of the equation
 
 
 
-    **Noun** + **Verb** = **Data**
-    Class.method # Class (Noun) method (Verb)
-    Taco.all # returned all Taco data!
-    🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮
+> **Noun** + **Verb** = **Data**
+>
+> Class.method # Class (Noun) method (Verb)
+>
+> Taco.all # returned all Taco data!
+>
+>    🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮
 
 
 With the help of Active Record, we can begin to write programs that follow this
 simple pattern to manipulate data.
+
 
 ### Convention Over configuration (10 / 35)
 
