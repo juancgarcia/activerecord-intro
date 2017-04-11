@@ -150,14 +150,16 @@ $ cd tunr-active-record
 $ bundle install
 ```
 
-If during `bundle install`, you get an error message like this one:
+Did you get an error from `bundle install`?
+<details>
+If you get an error message like this one:
+<code>
+&gt; An error occurred while installing json (1.8.3), and Bundler cannot continue.
 
-> An error occurred while installing json (1.8.3), and Bundler cannot continue.
->
-> Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
->
-
+&gt; Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
+</code>
 Then run this command: `$ bundle update`
+</details>
 
 Continue with the following `bash` commands:
 
