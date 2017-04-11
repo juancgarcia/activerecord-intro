@@ -398,9 +398,9 @@ We will use `binding.pry` in your ruby app to test out ActiveRecord class and in
 
 <br>
 
-```
-We use SQL because it is a <strong>relational</strong> database. But what does that really mean? Basically we want the ability to associate models in our domain. That can come in a variety of ways in a relational database, but at the heart of it is essentially this: One model has many other instances of another model. And that other model belongs to the original.
-```
+
+> We use SQL because it is a <strong>relational</strong> database. But what does that really mean? Basically we want the ability to associate models in our domain. That can come in a variety of ways in a relational database, but at the heart of it is essentially this: One model has many other instances of another model. And that other model belongs to the original.
+
 
 </details>
 
