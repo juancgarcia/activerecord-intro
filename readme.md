@@ -154,15 +154,17 @@ $ psql -d tunr_db < db/seeds.sql
 $ atom .
 ```
 
-> During `bundle install`, if you get an error message like this one:
+During `bundle install`, if you get an error message like this one:
 >
 > An error occurred while installing json (1.8.3), and Bundler cannot continue.
-> 
+>
 > Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
 >
 
-> Run this command:
-`$ bundle update`
+Run this command:
+```bash
+$ bundle update
+```
 
 You'll know you did this right if:
 
