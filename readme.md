@@ -150,8 +150,8 @@ $ cd tunr-active-record
 $ bundle install
 ```
 
-Did you get an error from `bundle install`?
 <details>
+<summary>Did you get an error from `bundle install`?</summary>
 If you get an error message like this one:
 <br>
 <br>
@@ -161,6 +161,8 @@ If you get an error message like this one:
 <br>
 <br>
 Then run this command: `$ bundle update`
+<br>
+<br>
 </details>
 
 Continue with the following `bash` commands:
