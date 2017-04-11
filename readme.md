@@ -187,18 +187,18 @@ pry(main)> pry(main)> Artist.first
  nationality: "American">
 ```
 
-**STOP HERE**
+**STOP**
 
 ### Code Review / Walkthrough - Tunr (I Do 10 / 45)
 
 Let's do a quick walkthrough of our code base so far...
 
 > The `app.rb` file is our main application file. This is where a lot of the main program logic will live.
-
+>
 > The `Gemfile` contains all the dependencies for our program.
-
+>
 > The `models/artist.rb` file will contain the class definition for the Artist class that will represent the artists table in SQL
-
+>
 > **Note**: by convention we always name our model file names singular
 
 #### The `Gemfile` - an aside
@@ -394,12 +394,12 @@ We will use `binding.pry` in your ruby app to test out ActiveRecord class and in
 ### Reframing (10 / 100)
 
 <details>
-<summary>**Q**. We have a lot of choice when it comes to databases, why are we using SQL?</summary>
+<summary><strong>Q</strong>. We have a lot of choice when it comes to databases, why are we using SQL?</summary>
 
 <br>
 
 ```
-We use SQL because it is a ***relational*** database. But what does that really mean? Basically we want the ability to associate models in our domain. That can come in a variety of ways in a relational database, but at the heart of it is essentially this: One model has many other instances of another model. And that other model belongs to the original.
+We use SQL because it is a <strong>relational</strong> database. But what does that really mean? Basically we want the ability to associate models in our domain. That can come in a variety of ways in a relational database, but at the heart of it is essentially this: One model has many other instances of another model. And that other model belongs to the original.
 ```
 
 </details>
