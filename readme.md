@@ -88,7 +88,7 @@ This method is useful for deciding data what needs to be persisted.
 </details><br>
 
 
-When we we data model, we tend to be talking about the **Nouns** in our
+When we data model, we tend to be talking about the **Nouns** in our
 application. These are the names of the *tables* in our database and the names
 of our Ruby *classes*.
 
@@ -96,11 +96,15 @@ Likewise when we write queries, we use **Verbs** to describe the specific data
 we want.
 
 Essentially, in order to store and retrieve information, a lot of what we do
-today in Ruby will look like some form of the equation:
+today in Ruby will look like some form of the equation
 
- > **Noun** + **Verb** = **Data**
- > Class.method # Class (Noun) method (Verb)
- > Taco.all # returned all Taco data! 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮
+
+
+    **Noun** + **Verb** = **Data**
+    Class.method # Class (Noun) method (Verb)
+    Taco.all # returned all Taco data!
+    🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮
+
 
 With the help of Active Record, we can begin to write programs that follow this
 simple pattern to manipulate data.
@@ -121,8 +125,6 @@ Some of the common ones we will encounter are naming conventions such as: plural
 </details>
 
 ##### If you don't follow the conventions, you're going to have a bad time.
-
-![pizza'd when should have french-fried](http://i62.tinypic.com/2vt47dc.jpg)
 
 Obeying the naming conventions in Active Record saves you a good deal of headaches.
 
