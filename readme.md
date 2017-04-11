@@ -306,10 +306,10 @@ elvis = Artist.create(name: "Elvis Presley", nationality: "American")
 <!-- SQL for create  -->
 <details>
 <summary>This would roughly translate to `SQL` code</summary>
->
-```sql
+
+<code>
 INSERT INTO artists (name, nationality) VALUES ('Elvis Presley', 'American');
-```
+</code>
 
 </details>
 
