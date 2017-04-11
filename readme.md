@@ -344,11 +344,9 @@ Artist.find(1)
 <!-- SQL for find  -->
 <details>
 <summary>This would roughly translate to `SQL` code</summary>
->
-```sql
+<code>
 SELECT * FROM artists WHERE id = 1 LIMIT 1;
-```
-
+</code>
 </details>
 
 <br>
