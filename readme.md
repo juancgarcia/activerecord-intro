@@ -79,11 +79,7 @@ Programmers are constantly modeling domains, real world, fictional, abstract, ma
 
 <summary>What is Domain modeling and why do we do it?</summary>
 
-```
-Domain modeling is the act of describing entities
-and their relationships in an application's data.
-This method is useful for deciding data what needs to be persisted.
-```
+> Domain modeling is the act of describing entities and their relationships in an application's data. This method is useful for deciding data what needs to be persisted.
 
 </details><br>
 
@@ -121,11 +117,10 @@ Before we get started with code, let's highlight a reoccurring theme with Active
 <summary><strong>Question:</strong>  Without getting into the specifics of AR, what do you think we mean by convention over configuration?</summary>
 <br>
 
-```
-Active Record and Rails, and other frameworks have a whole bunch of conventions that they follow so that you do not have to mess with different configuration details later. These conventions exist because developers arrive at a consensus on best practices. These road-tested conventions allow us to spend less time trying to configure when there already is an accepted way to do things. Thanks to the programmers who have come before us, we inherit a well-designed, default configuration that spares us from many headaches that we'd encounter if we were building things from scratch (yikes!).
+> Active Record and Rails, and other frameworks have a whole bunch of conventions that they follow so that you do not have to mess with different configuration details later. These conventions exist because developers arrive at a consensus on best practices. These road-tested conventions allow us to spend less time trying to configure when there already is an accepted way to do things. Thanks to the programmers who have come before us, we inherit a well-designed, default configuration that spares us from many headaches that we'd encounter if we were building things from scratch (yikes!).
+>
+> Some of the common ones we will encounter are naming conventions such as: plural vs single, Capitalized/ALL_CAPS_SNAKE_CASE/lowercase, camelCase/kabob-case/snake_case. Obeying the naming conventions in Active Record, particularly regarding what is singular vs. what is plural, saves you a good deal of headaches.
 
-Some of the common ones we will encounter are naming conventions such as: plural vs single, Capitalized/ALL_CAPS_SNAKE_CASE/lowercase, camelCase/kabob-case/snake_case. Obeying the naming conventions in Active Record, particularly regarding what is singular vs. what is plural, saves you a good deal of headaches.
-```
 </details>
 
 ##### If you don't follow the conventions, you're going to have a bad time.
@@ -177,7 +172,7 @@ Check you did everything correctly.
 - Run your program(`$ ruby app.rb`)
 - When you see the `pry` REPL, run this ruby code: `Artist.first`
 
-Your output should be something like this(it won't be the same letters and numbers next to `#<Artist:`)
+Your output should be something like this (it won't be the same letters and numbers next to `#<Artist:`)
 ```bash
 pry(main)> pry(main)> Artist.first
 => #<Artist:0x007ff851821bc0
