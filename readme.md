@@ -161,10 +161,7 @@ During `bundle install`, if you get an error message like this one:
 > Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
 >
 
-Run this command:
-```bash
-$ bundle update
-```
+Run this command: `$ bundle update`
 
 You'll know you did this right if:
 
