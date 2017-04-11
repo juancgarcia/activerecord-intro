@@ -148,32 +148,43 @@ We want to be able to do CRUD for these models with Active Record. We'll be goin
 $ git clone git@github.com:ga-wdi-exercises/tunr-active-record.git
 $ cd tunr-active-record
 $ bundle install
+```
+
+If during `bundle install`, you get an error message like this one:
+
+> An error occurred while installing json (1.8.3), and Bundler cannot continue.
+>
+> Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
+>
+
+Then run this command: `$ bundle update`
+
+Continue with the following `bash` commands:
+
+```bash
 $ createdb tunr_db
 $ psql -d tunr_db < db/schema.sql
 $ psql -d tunr_db < db/seeds.sql
 $ atom .
 ```
 
-During `bundle install`, if you get an error message like this one:
->
-> An error occurred while installing json (1.8.3), and Bundler cannot continue.
->
-> Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
->
 
-Run this command: `$ bundle update`
+Check you did everything correctly.
 
-You'll know you did this right if:
+- Run your program(`$ ruby app.rb`)
+- When you see the `pry` REPL, run this ruby code: `Artist.first`
 
-Run your program(`$ ruby app.rb`) and then when you enter `pry` run this line of code:
-
-you should get something like this(it won't be the same letters and numbers)
+Your output should be something like this(it won't be the same letters and numbers next to `#<Artist:`)
 ```bash
-pry(main)> Artist.all
-=> #<Artist::ActiveRecord_Relation:0x3fc4911af384>
+pry(main)> pry(main)> Artist.first
+=> #<Artist:0x007ff851821bc0
+ id: 1,
+ name: "Weird Al Yankovich",
+ photo_url: "http://i.huffpost.com/gen/1952378/images/o-WEIRD-AL-facebook.jpg",
+ nationality: "American">
 ```
 
-**STOP**
+**STOP HERE**
 
 ### Code Review / Walkthrough - Tunr (I Do 10 / 45)
 
