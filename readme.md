@@ -106,7 +106,7 @@ today in Ruby will look like some form of the equation
 >
 > Taco.all # returned all Taco data!
 >
->    🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮
+> 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮 🌮
 
 
 With the help of Active Record, we can begin to write programs that follow this
@@ -155,11 +155,11 @@ $ atom .
 ```
 
 > During `bundle install`, if you get an error message like this one:
-> ```
-An error occurred while installing json (1.8.3), and Bundler cannot
-continue.
-Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
-```
+>
+> An error occurred while installing json (1.8.3), and Bundler cannot continue.
+> 
+> Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
+>
 
 > Run this command:
 `$ bundle update`
