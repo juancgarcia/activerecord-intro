@@ -153,11 +153,13 @@ $ bundle install
 Did you get an error from `bundle install`?
 <details>
 If you get an error message like this one:
-<code>
-&gt; An error occurred while installing json (1.8.3), and Bundler cannot continue.
-
-&gt; Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
-</code>
+<br>
+<br>
+<code>An error occurred while installing json (1.8.3), and Bundler cannot continue.</code>
+<br>
+<code>Make sure that `gem install json -v '1.8.3'` succeeds before bundling.</code>
+<br>
+<br>
 Then run this command: `$ bundle update`
 </details>
 
