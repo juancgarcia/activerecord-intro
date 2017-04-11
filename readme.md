@@ -43,9 +43,9 @@ For the next 5 minutes, pair up and research what ORM's are.
 
 Try to answer these questions:
 
-0. What is the Active record pattern in a nutshell?
-1. At a high level, what are ORM's and how might they be useful?
-2. What is the importance of interfacing the server with the database?
+1. What is the Active record pattern in a nutshell?
+2. At a high level, what are ORM's and how might they be useful?
+3. What is the importance of interfacing the server with the database?
 
 ## ORM's & Active Record (10 / 25)
 
@@ -118,7 +118,7 @@ simple pattern to manipulate data.
 Before we get started with code, let's highlight a reoccurring theme with Active Record and Rails in general. You'll often hear us say, "Convention Over Configuration." Before we discuss the concept as a class, take 30 seconds to think about what that phrase means--why *might* we prefer convention over configuration?
 
 <details>
-<summary>**Question:**  Without getting into the specifics of AR, what do you think we mean by convention over configuration?</summary>
+<summary><strong>Question:</strong>  Without getting into the specifics of AR, what do you think we mean by convention over configuration?</summary>
 <br>
 
 ```
@@ -153,16 +153,13 @@ $ bundle install
 <details>
 <summary>Did you get an error from `bundle install`?</summary>
 If you get an error message like this one:
-<br>
-<br>
-<code>An error occurred while installing json (1.8.3), and Bundler cannot continue.</code>
-<br>
-<code>Make sure that `gem install json -v '1.8.3'` succeeds before bundling.</code>
-<br>
-<br>
+
+```
+An error occurred while installing json (1.8.3), and Bundler cannot continue.
+Make sure that `gem install json -v '1.8.3'` succeeds before bundling.
+```
+
 Then run this command: `$ bundle update`
-<br>
-<br>
 </details>
 
 Continue with the following `bash` commands:
@@ -314,6 +311,7 @@ INSERT INTO artists (name, nationality) VALUES ('Elvis Presley', 'American');
 </details>
 
 <br>
+
 **(ST-WG)** Why is there a distinction between when it's saved in one command versus two?
 
 One really handy feature we get from an Active Record inherited class is that all of the attribute columns of our model have `attr_accessor`'s as well. So we can do things like:
